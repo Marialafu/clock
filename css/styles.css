@@ -21,4 +21,64 @@ nav ul {
 body {
   margin: 0;
   font-family: sans-serif;
+  background-color: black;
+  color: white;
+}
+.title{
+  font-weight: 900;
+  font-size: 4rem;
+}
+.text{
+  font-weight: 400;
+  font-size: 2rem;
+}
+.container{
+  width: 23.4375rem;
+  height: 41.6875rem;
+  padding: 2rem;
+  border: 0.0625rem solid white;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  
+}
+.analog-clock{
+  width: 18.75rem;
+  height: 18.75rem;
+  border-radius: 100%;
+  background-color: aliceblue;
+  padding: 0.8rem;
+  border: 0.8rem solid rgb(0, 0, 0);
+  box-shadow: 0 0 0 10px rgb(255, 193, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.outside-clock{
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 100%;
+  background-color: rgb(255, 181, 243);
+}
+.inside-clock{
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 100%;
+  background-color: rgb(255, 202, 246);
+}
+.hours-hand{
+  width: 1.25rem;
+  height: 8.125rem;
+  border-radius: 0.625rem;
+  background-color: rgb(255, 150, 237);
+}
+.minutes-hand{
+  width: 0.9375rem;
+  height: 6.25rem;
+  border-radius: 0.625rem;
+  background-color: rgb(255, 62, 223);
+  position: relative;
+  top: -8.125rem;
+  left: 0.1531rem;
 }
