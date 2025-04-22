@@ -6,9 +6,6 @@ const secondsHandElement = document.getElementById('seconds-hand');
 const minutesHandElement = document.getElementById('minutes-hand');
 const hoursHandElement = document.getElementById('hours-hand');
 
-let secondsDeg = 0;
-let minutesDeg = 0;
-
 const weekDaysList = [
   'Domingo',
   'Lunes',
@@ -51,14 +48,15 @@ const defineDigitalClock = () => {
   daysElement.textContent = `${day} ${date.getDate()} ${month} ${date.getFullYear()}`;
 
   //ANALOGIC CLOCK
-  secondsDeg += 6
+  let secondsDeg = date.getSeconds() * 6;
 
-  if (secondsDeg === 360){
-    secondsDeg = 0
-    secondsDeg += 6
-  }
+  // if (secondsDeg === 360){
+  //   secondsDeg = 0
+  // }
   rootStyles.setProperty('--deg-seconds', `${secondsDeg}deg`)
-
+  
+  let minutesDeg = 0;
+  
 
 };
 setInterval(defineDigitalClock, 1000);
