@@ -48,30 +48,29 @@ const defineDigitalClock = () => {
   daysElement.textContent = `${day} ${date.getDate()} ${month} ${date.getFullYear()}`;
 
   //ANALOGIC CLOCK
-  let secondsDeg = date.getSeconds() * 6;
+  let secondsDeg = seconds * 6;
+  let minutesDeg = minutes * 0.5;
+  let hoursDeg = hours * 30;
 
-  // if (secondsDeg === 360){
-  //   secondsDeg = 0
-  // }
+  if (secondsDeg === 360){
+    secondsDeg = 0 * 6
+  }
+  if (minutesDeg === 360){
+    minutesDeg = 0 * 0.5
+  }
+  if (hoursDeg === 360){
+    hoursDeg = 0 * 30
+  }
+
   rootStyles.setProperty('--deg-seconds', `${secondsDeg}deg`)
+  rootStyles.setProperty('--deg-minutes', `${minutesDeg}deg`)
+  rootStyles.setProperty('--deg-hours', `${hoursDeg}deg`)
   
-  let minutesDeg = 0;
+  
   
 
 };
 setInterval(defineDigitalClock, 1000);
-
-const defineHours = () => {
-  minutesDeg += 30
-
-  if (minutesDeg === 360){
-    minutesDeg = 0
-    minutesDeg += 30
-  }
-  rootStyles.setProperty('--deg-minutes', `${minutesDeg}deg`)
-
-}
-setInterval(defineHours, 60000);
 
 //30º por hora
 //0.5º por minuto
