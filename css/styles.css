@@ -1,3 +1,8 @@
+:root{
+  --deg-seconds: 45deg;
+  --deg-minutes: 45deg;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -24,6 +29,7 @@ body {
   background-color: black;
   color: white;
 }
+
 .title{
   font-weight: 900;
   font-size: 4rem;
@@ -67,11 +73,19 @@ body {
   border-radius: 100%;
   background-color: rgb(255, 202, 246);
 }
+.circle{
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 100%;
+  background-color: rgb(255, 202, 246);
+}
 .hours-hand{
   width: 1.25rem;
   height: 8.125rem;
   border-radius: 0.625rem;
   background-color: rgb(255, 150, 237);
+  position: relative;
+  top: 0.625rem;
 }
 .minutes-hand{
   width: 0.9375rem;
@@ -79,6 +93,24 @@ body {
   border-radius: 0.625rem;
   background-color: rgb(255, 62, 223);
   position: relative;
-  top: -8.125rem;
+  top: -7.5rem;
   left: 0.1531rem;
+}
+.seconds-hand{
+  width: 0.3125rem;
+  height: 8.125rem;
+  border-radius: 0.625rem;
+  background-color: rgb(128, 0, 106);
+  position: relative;
+  top: -13.75rem;
+  left: 0.4375rem;
+}
+.transform-position{
+  transform-origin: top center;
+}
+.transform-seconds{
+  rotate: var(--deg-seconds);
+}
+.transform-minutes{
+  rotate: var(--deg-minutes);
 }
