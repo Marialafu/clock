@@ -27,8 +27,8 @@ nav ul {
 body {
   margin: 0;
   font-family: sans-serif;
-  background-color: black;
-  color: white;
+  background-color: rgb(255, 213, 136);
+  color: rgb(255, 136, 0);
 }
 
 .title{
@@ -43,7 +43,8 @@ body {
   width: 23.4375rem;
   height: 41.6875rem;
   padding: 2rem;
-  border: 0.0625rem solid white;
+  border: 3px solid rgb(255, 136, 0);
+  border-radius: 1.875rem;
   margin-inline: auto;
   display: flex;
   flex-direction: column;
@@ -51,48 +52,50 @@ body {
   
 }
 .analog-clock{
+  position: relative;
   width: 18.75rem;
   height: 18.75rem;
   border-radius: 100%;
   background-color: aliceblue;
   padding: 0.8rem;
-  border: 0.8rem solid rgb(0, 0, 0);
-  box-shadow: 0 0 0 10px rgb(111, 111, 111);
+  border: 0.8rem solid rgb(255, 213, 136);
+  box-shadow: 0 0 0 10px rgb(255, 136, 0);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .inside-clock{
+  position: absolute;
   width: 1.25rem;
   height: 1.25rem;
   border-radius: 100%;
-  background-color: rgb(255, 0, 212);
+  background-color: rgb(255, 136, 0);
 }
 .hours-hand{
-  width: 1.25rem;
+  width: 0.625rem;
   height: 8.125rem;
-  border-radius: 0.625rem;
-  background-color: rgb(41, 41, 41);
-  position: relative;
-  top: -7.5rem;
+  border-radius: 0.625rem 0.625rem 0 0;
+  background-color: rgb(255, 158, 46);
+  position: absolute;
+  top: 0.5rem;
 }
 .minutes-hand{
-  width: 0.9375rem;
+  width: 0.5rem;
   height: 6.25rem;
-  border-radius: 0.625rem;
-  background-color: rgb(67, 67, 67);
-  position: relative;
-  top: -13.75rem;
-  left: 0.1531rem;
+  border-radius: 0.625rem 0.625rem 0 0;
+  background-color: rgb(255, 177, 88);
+  position: absolute;
+  top: 2.375rem;
+  left: calc(50%);
 }
 .seconds-hand{
   width: 0.3125rem;
   height: 8.125rem;
-  border-radius: 0.625rem;
-  background-color: rgb(102, 102, 102);
-  position: relative;
-  top: -21.875rem;
-  left: 0.5rem;
+  border-radius: 0.625rem 0.625rem 0 0;
+  background-color: rgb(212, 113, 0);
+  position: absolute;
+  top: 0.625rem;
+  left: calc(50%);
 }
 .transform-position{
   transform-origin: bottom center;
@@ -106,3 +109,14 @@ body {
 .transform-hours{
   rotate: var(--deg-hours);
 }
+
+.dots{
+  position: relative;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 100%;
+  top: -115px;
+  background-color: rgb(255, 145, 0);
+  box-shadow: 0 230px 0 0 rgb(255, 145, 0), 120px 115px 0 0 rgb(255, 145, 0), -120px 115px 0 0 rgb(255, 145, 0);
+}
+
